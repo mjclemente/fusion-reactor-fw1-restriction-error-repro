@@ -1,0 +1,25 @@
+{
+    "app":{
+        "cfengine":"lucee-light@5.3.6+61"
+    },
+    "jvm":{
+        "args":"-XX:MaxRAMPercentage=75 -Dfrstartupdelay=30000 -Dfr.odl.activation.retry_amount=10 -Dfr.odl.activation.retry_interval=10000 -Dfrlicenseservice.logMessages=true"
+    },
+    "web":{
+        "rewrites":{
+            "enable":true
+        },
+        "HTTP":{
+            "port":61883
+        }
+    },
+    "fusionreactor":{
+        "enable":true,
+        "port":"8088",
+        "installID":"fusionreactor@8.7.0",
+        "reactorconfFile":"reactor.conf",
+        "licenseDeactivateOnShutdown":true,
+        "password":"${FR_PASSWORD}",
+        "licenseKey":"${FR_LICENSEKEY}"
+    }
+}
